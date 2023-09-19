@@ -1,11 +1,18 @@
 body {
     margin-top: 100px;
+    background-color: azure;
+}
+
+ul {
+    background-color: blue;
+    padding: 20px;
 }
 
 ul li {
-    border: 1px solid gray;
     list-style: none;
     padding: 5px;
+    margin: none;
+    background-color: aqua;
 }
 
 h1 {
@@ -17,7 +24,8 @@ input {
     width: 100%;
 }
 
-i {
-    padding: 5px;
-    float: right;
+button {
+   float: right; 
+   border: none;
+   background-color: aqua;
 }
