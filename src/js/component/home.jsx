@@ -5,7 +5,6 @@ import React, { useState } from "react";
 const Home = () => {
 	const [items, setItems] = useState('');
 	const [addToList, setAddToList] = useState([]);
-	const [show, setShow] = useState({display : 'none'});
 
 	function addItemToList(e) {
         if (e.key === "Enter") {
@@ -20,6 +19,7 @@ const Home = () => {
 			<ul>
 				<li>
 					<input 
+					className="input"
 					type='text' 
 					placeholder='What needs to be done?' 
 					value={items} 
@@ -28,15 +28,17 @@ const Home = () => {
 					</input>
 				</li>
 				{addToList.map((a, index) => 
-					(<li 
-					onMouseEnter={(e) => {setShow({display: 'block'});}} 
-					onMouseLeave={(e) => {setShow({display: 'none'});}}>
-						{a}
-						<button 
-						style={show}
+					(<li>
+						<span
+						className="hide"
+						// style={show}
 						onClick={() => setAddToList(addToList.filter((t, currentIndex) => index != currentIndex))}>
-							<i class="fa-solid fa-x"></i>
-						</button>
+							<i class="fa-solid fa-eraser"></i>
+						</span>
+						<input 
+						type="checkbox"
+						className="checkbox"/> 
+						<label>{a}</label>
 					</li>))
 				}
 			</ul>
