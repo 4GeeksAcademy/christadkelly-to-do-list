@@ -1,11 +1,17 @@
 $color1: Snow;
 $color2: White;
-$color3: AliceBlue;
+$color3: rgb(238, 251, 255);
+$color4: black;
+$color5: lightblue;
 
 body {
     margin-top: 20px;
     font-family: 'Courier New', Courier, monospace;
     background-color: $color1;
+}
+
+h1 {
+    text-align: center;
 }
 
 ul {
@@ -14,9 +20,14 @@ ul {
     border: {
         style: solid;
         width: 1px;
-        color: black;
+        color: $color4;
     }
-    box-shadow: 10px 10px lightblue;
+    box-shadow: 10px 10px $color5;
+}
+
+.input {
+    border: none;
+    width: 100%;
 }
 
 li {
@@ -31,19 +42,18 @@ li:nth-child(2n) {
 	background-color: $color3;
 }
 
+li:hover .hide {
+    display: block;
+}
+
 span {
     float: right; 
     border: none;
     margin-right: 5px;
 }
 
-h1 {
-    text-align: center;
-}
-
-.input {
-    border: none;
-    width: 100%;
+.hide {
+    display: none;
 }
 
 .checkbox {
@@ -52,17 +62,8 @@ h1 {
     height: 25px;
     width: 25px;
     background-color: #eee;
-  }
+}
 
 label {
     margin-left: 5px;
 }
-
-.hide {
-    display: none;
-}
-
-li:hover .hide {
-    display: block;
-}
-
